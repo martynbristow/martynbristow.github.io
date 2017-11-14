@@ -19,9 +19,9 @@ test:
 pages:
   stage: deploy
   script:
-  - curl http://github.com/pietromenna/jekyll-cayman-theme/archive/master.zip
+  - curl -L -o jekyll-cayman-theme-master.zip http://github.com/pietromenna/jekyll-cayman-theme/archive/master.zip
   - tar -xvf jekyll-cayman-theme-master.zip
-  - cd jekyll-cayman-theme-master
+  - rm jekyll-cayman-theme-master.zip
   - bundle exec jekyll build -d public
   artifacts:
     paths:
